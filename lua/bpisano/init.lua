@@ -1,2 +1,2 @@
-require("bpisano.remap")
+require("bpisano.keymaps")
 require("bpisano.set")
