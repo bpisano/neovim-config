@@ -1,1 +1,1 @@
-require("bpisano")
+require "bpisano"

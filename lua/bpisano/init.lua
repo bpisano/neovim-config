@@ -1,2 +1,11 @@
-require("bpisano.keymaps")
-require("bpisano.set")
+require "bpisano.lsp"
+require "bpisano.cmp"
+require "bpisano.keymaps"
+require "bpisano.nvim-comment"
+require "bpisano.nvim-tree"
+require "bpisano.plugins"
+require "bpisano.quick-scope"
+require "bpisano.set"
+require "bpisano.telescope"
+require "bpisano.toggleterm"
+require "bpisano.vscode"
