@@ -47,6 +47,10 @@ return require('packer').startup(function(use)
     -- Colorschemes
     use 'Mofiqul/vscode.nvim'
 
+    -- Telescope
+    use "nvim-telescope/telescope.nvim"
+    use 'nvim-telescope/telescope-media-files.nvim'
+
     -- cmp plugins
     use "hrsh7th/nvim-cmp"         -- The completion plugin
     use "hrsh7th/cmp-buffer"       -- buffer completions
@@ -56,7 +60,7 @@ return require('packer').startup(function(use)
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
 
-    -- snippets
+    -- Snippets
     use "L3MON4D3/LuaSnip"             --snippet engine
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use with lua
 
@@ -65,6 +69,12 @@ return require('packer').startup(function(use)
     use "williamboman/mason.nvim" -- simple to use language server installe
     use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
     use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
+
+    -- Treesitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
+    }
 
     use "terrortylor/nvim-comment"
     use "github/copilot.vim"
@@ -76,14 +86,6 @@ return require('packer').startup(function(use)
         },
     }
 
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
-    use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate"
-    }
     use {
         "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()

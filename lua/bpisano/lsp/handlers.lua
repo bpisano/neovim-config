@@ -84,11 +84,19 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  if client.name == "tsserver" then
-    client.server_capabilities.documentFormattingProvider = false
-  end
-  lsp_keymaps(bufnr)
-  lsp_highlight_document(client)
+    if client.name == "tsserver" then
+        client.server_capabilities.documentFormattingProvider = false
+    end
+    -- local has_custom_opts, server_custom_opts = pcall(require, "bpisano.lsp.settings." .. server)
+    -- if has_custom_opts then
+    --     opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
+    -- end
+    -- if server.name == "omnisharp" then
+    --     local omnisharp_opts = require("bpisano.lsp.settings.omnisharp")
+    --     opts = vim.tbl_deep_extend("force", omnisharp_opts, opts)
+    -- end
+    lsp_keymaps(bufnr)
+    lsp_highlight_document(client)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

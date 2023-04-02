@@ -35,6 +35,10 @@ keymap("v", "∆", ":'<,'>m '>+1<CR>==gv", opts)
 keymap("v", "˚", ":'<,'>m '<-2<CR>==gv", opts)
 keymap("v", "p", '"_dP', opts)
 
+-- Telescope
+keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+vim.keymap.set('n', 'fg', "<cmd>Telescope live_grep<cr>", {})
+
 vim.keymap.set("n", "<C-t>", vim.cmd.ToggleTerm)
 
 vim.api.nvim_set_keymap('n', '<C-s>', ':noh<CR>', { noremap = true, silent = true })
