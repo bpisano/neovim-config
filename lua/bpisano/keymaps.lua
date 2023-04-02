@@ -14,10 +14,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize windows
-keymap("n", "<C-(>", ":resize -2<CR>", opts)
-keymap("n", "<C-)>", ":resize +2<CR>", opts)
-keymap("n", "<C-_>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-+>", ":vertical resize +2<CR>", opts)
+keymap("n", "<A-Down>", ":resize -2<CR>", opts)
+keymap("n", "<A-Up>", ":resize +2<CR>", opts)
+keymap("n", "<A-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -36,16 +36,21 @@ keymap("v", "˚", ":'<,'>m '<-2<CR>==gv", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-vim.keymap.set('n', 'fg', "<cmd>Telescope live_grep<cr>", {})
+keymap(
+	"n",
+	"<leader>ff",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
+vim.keymap.set("n", "fg", "<cmd>Telescope live_grep<cr>", {})
 
 vim.keymap.set("n", "<C-t>", vim.cmd.ToggleTerm)
 
-vim.api.nvim_set_keymap('n', '<C-s>', ':noh<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>ef', ':EslintFixAll<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-s>", ":noh<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ef", ":EslintFixAll<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-    callback = function()
-        vim.lsp.buf.format()
-    end
+	callback = function()
+		vim.lsp.buf.format()
+	end,
 })
