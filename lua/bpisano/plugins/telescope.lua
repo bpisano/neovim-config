@@ -1,9 +1,7 @@
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
+local status, telescope = pcall(require, "telescope")
+if not status then
   return
 end
-
-telescope.load_extension('media_files')
 
 local actions = require "telescope.actions"
 
@@ -76,10 +74,9 @@ telescope.setup {
       },
     },
   },
-  extensions = {
-    media_files = {
-        filetypes = {"png", "webp", "jpg", "jpeg", "pdf", "mp4"},
-        find_cmd = "rg" -- find command (defaults to `fd`)
-      }
-  },
+  pickers = {
+    find_files = {
+      theme = "dropdown",
+    }
+  }
 }
