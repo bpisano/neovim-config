@@ -9,6 +9,18 @@ telescope.setup {
   defaults = {
     selection_caret = " ",
     path_display = { "smart" },
+    sorting_strategy = "ascending",
+    layout_strategy = "horizontal",
+    layout_config = {
+      prompt_position = "top",
+      preview_cutoff = 120,
+      horizontal = {
+        mirror = false,
+      },
+      vertical = {
+        mirror = true,
+      },
+    },
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
@@ -73,10 +85,7 @@ telescope.setup {
         ["?"] = actions.which_key,
       },
     },
-  },
-  pickers = {
-    find_files = {
-      theme = "dropdown",
-    }
   }
 }
+
+telescope.load_extension("fzf")
