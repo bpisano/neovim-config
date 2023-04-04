@@ -71,6 +71,21 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- for autocompletion
   use "rafamadriz/friendly-snippets" -- useful snippets
 
+  -- Managing lsp servers
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
+
+  -- Configuring lsp servers
+  use "neovim/nvim-lspconfig"
+  use "hrsh7th/cmp-nvim-lsp" -- for autocompletion
+  use({ "glepnir/lspsaga.nvim", branch = "main" })
+  use "jose-elias-alvarez/typescript.nvim"
+  use "onsails/lspkind-nvim" -- beautiful autocompletion
+
+  -- Formatting and linting
+  use "jose-elias-alvarez/null-ls.nvim"
+  use "jayp0521/mason-null-ls.nvim"
+
   if packer_bootstrap then
     require('packer').sync()
   end
