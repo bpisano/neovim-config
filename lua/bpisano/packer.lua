@@ -102,6 +102,9 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
+	-- Indent blank lines
+	use("lukas-reineke/indent-blankline.nvim")
+
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 

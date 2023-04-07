@@ -18,7 +18,7 @@ null_ls.setup({
 	sources = {
 		formatting.stylua,
 		formatting.prettier,
-    formatting.csharpier,
+		formatting.csharpier,
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js
 			condition = function(utils)
@@ -29,7 +29,6 @@ null_ls.setup({
 	},
 	on_attach = function(current_client, bufnr)
 		-- format on save
-		print(current_client.supports_method("textDocument/formatting"))
 		if current_client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 			vim.api.nvim_create_autocmd("BufWritePre", {
