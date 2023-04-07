@@ -1,6 +1,6 @@
-local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then
-  return
+	return
 end
 
 local function lsp_keymaps(bufnr)
@@ -63,7 +63,7 @@ local function lsp_setup()
 end
 
 local function lsp_attach(client, bufnr)
-  if client.name == "tsserver" then
+	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
 	if client.name == "lua_ls" then

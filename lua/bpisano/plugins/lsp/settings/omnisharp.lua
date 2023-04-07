@@ -7,6 +7,8 @@ local pid = vim.fn.getpid()
 local home = os.getenv("HOME")
 local omnisharp_bin = home .. "/.cache/omnisharp-vim/omnisharp-roslyn/run"
 
+vim.g.OmniSharp_highlighting = 0
+
 return {
 	cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
 	root_dir = lspconfig.util.root_pattern("*.csproj", "*.sln"),

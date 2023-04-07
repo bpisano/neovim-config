@@ -41,6 +41,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Save
 keymap("n", "<C-s>", ":w<CR>", opts)
 
+-- Search and replace
+keymap("n", "<leader>rr", ":%s/", opts)
+
 -- Insert
 -- Press jk fast to enter command mode
 keymap("i", "jk", "<ESC>", opts)
