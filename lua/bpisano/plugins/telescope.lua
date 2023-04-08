@@ -10,6 +10,7 @@ telescope.setup({
 		selection_caret = " ",
 		path_display = { "smart" },
 		sorting_strategy = "ascending",
+		file_ignore_patterns = { "%.meta" },
 		layout_strategy = "horizontal",
 		layout_config = {
 			prompt_position = "top",
@@ -82,16 +83,6 @@ telescope.setup({
 				["<PageDown>"] = actions.results_scrolling_down,
 
 				["?"] = actions.which_key,
-			},
-		},
-	},
-	extensions = {
-		repo = {
-			list = {
-				fd_opts = {
-					"--no-ignore-vcs",
-				},
-				search_dirs = { "~/" },
 			},
 		},
 	},
