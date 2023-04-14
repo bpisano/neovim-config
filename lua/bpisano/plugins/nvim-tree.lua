@@ -21,11 +21,33 @@ nvim_tree.setup({
 			"*.meta",
 		},
 	},
-	update_focused_file = {
-		enable = true,
-	},
 	renderer = {
-		group_empty = true,
+		highlight_opened_files = "name",
+		group_empty = false,
+		indent_markers = {
+			enable = true,
+			inline_arrows = false,
+			icons = {
+				corner = "└",
+				edge = "│",
+				item = "│",
+				bottom = "─",
+				none = " ",
+			},
+		},
+		icons = {
+			git_placement = "after",
+		},
+	},
+	diagnostics = {
+		enable = true,
+		show_on_dirs = true,
+		icons = {
+			hint = "",
+			info = "",
+			warning = "",
+			error = "",
+		},
 	},
 	view = {
 		width = 42,

@@ -41,7 +41,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 
 	-- Colorscheme
-	use("folke/tokyonight.nvim")
+	use("navarasu/onedark.nvim")
 
 	-- Editing
 	use("tpope/vim-surround")

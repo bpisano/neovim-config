@@ -36,10 +36,10 @@ null_ls.setup({
 				pattern = "*.tsx,*.ts,*.jsx,*.js",
 				callback = function()
 					if vim.fn.exists(":TypescriptFixAll") then
-						vim.cmd("TypescriptRemoveUnused!")
-						vim.cmd("TypescriptFixAll!")
 						vim.cmd("TypescriptAddMissingImports!")
-						vim.cmd("TypescriptOrganizeImports!")
+						vim.cmd("TypescriptRemoveUnused")
+						vim.cmd("TypescriptFixAll")
+						vim.cmd("TypescriptOrganizeImports")
 					end
 				end,
 			})

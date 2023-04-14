@@ -1,11 +1,10 @@
-local status, tokyonight = pcall(require, "tokyonight")
+local status, onedark = pcall(require, "onedark")
 if not status then
-  print("Colorscheme not found.")
-  return
+	print("Colorscheme not found.")
+	return
 end
 
-tokyonight.setup({
-  style = "night"
+onedark.setup({
+	style = "deep",
 })
-
-vim.cmd[[colorscheme tokyonight]]
+onedark.load()
