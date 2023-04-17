@@ -19,6 +19,7 @@ nvim_tree.setup({
 		dotfiles = false,
 		custom = {
 			"*.meta",
+			"*.csproj",
 		},
 	},
 	git = {
