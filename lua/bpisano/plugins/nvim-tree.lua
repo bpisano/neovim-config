@@ -21,6 +21,9 @@ nvim_tree.setup({
 			"*.meta",
 		},
 	},
+	git = {
+		ignore = false,
+	},
 	renderer = {
 		highlight_opened_files = "name",
 		group_empty = false,

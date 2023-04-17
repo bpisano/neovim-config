@@ -10,7 +10,7 @@ telescope.setup({
 		selection_caret = " ",
 		path_display = { "smart" },
 		sorting_strategy = "ascending",
-		file_ignore_patterns = { "%.meta", "%.prefab", "%.asset" },
+		file_ignore_patterns = { "%.meta", "%.prefab", "%.asset", "^.git/" },
 		layout_strategy = "horizontal",
 		layout_config = {
 			prompt_position = "top",

@@ -1,6 +1,12 @@
 local gitsigns_status, gitsigns = pcall(require, "gitsigns")
 if not gitsigns_status then
-  return
+	return
 end
 
-gitsigns.setup()
+gitsigns.setup({
+	current_line_blame_opts = {
+		virt_text = true,
+		virt_text_pos = "eol",
+		delay = 1000,
+	},
+})
