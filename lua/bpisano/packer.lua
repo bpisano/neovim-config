@@ -58,8 +58,16 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
-	-- Copilot
+	-- Copilot & ChatGPT
 	use("github/copilot.vim")
+	use({
+		"jackMort/ChatGPT.nvim",
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	})
 
 	-- Autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
