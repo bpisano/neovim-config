@@ -37,9 +37,9 @@ null_ls.setup({
 				callback = function()
 					if vim.fn.exists(":TypescriptFixAll") then
 						vim.cmd("TypescriptAddMissingImports!")
-						vim.cmd("TypescriptRemoveUnused")
-						vim.cmd("TypescriptFixAll")
-						vim.cmd("TypescriptOrganizeImports")
+						vim.cmd("TypescriptRemoveUnused!")
+						vim.cmd("TypescriptFixAll!")
+						vim.cmd("TypescriptOrganizeImports!")
 					end
 				end,
 			})
