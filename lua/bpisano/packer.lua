@@ -44,8 +44,9 @@ return packer.startup(function(use)
 	use("navarasu/onedark.nvim")
 
 	-- Editing
-	use("tpope/vim-surround")
-	use("terrortylor/nvim-comment")
+	use("tpope/vim-surround") -- surround text objects
+	use("terrortylor/nvim-comment") -- comment text objects
+	use("Djancyp/better-comments.nvim") -- better comments
 
 	-- File explorer
 	use("nvim-tree/nvim-tree.lua")

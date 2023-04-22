@@ -11,5 +11,5 @@ keymap("n", "<leader>E", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>fe", ":NvimTreeFindFile<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)

@@ -73,4 +73,7 @@ for _, server in pairs(servers) do
 	end
 
 	lspconfig[server].setup(opts)
+	if server == "tsserver" then
+		print(opts)
+	end
 end
