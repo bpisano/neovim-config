@@ -42,7 +42,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- Search and replace
-keymap("n", "<leader>rr", ":%s/", opts)
+keymap("n", "<leader>rr", ":%s/", { noremap = true })
+keymap("x", "<leader>rv", [["hy:%s/<C-r>h//g<left><left>]], { noremap = true })
 
 -- Insert
 -- Press jk fast to enter command mode

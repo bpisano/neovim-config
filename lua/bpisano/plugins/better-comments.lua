@@ -1,6 +1,6 @@
-local status, better_comment = pcall(require, "better-comment")
+local status, todo_comments = pcall(require, "todo-comments")
 if not status then
 	return
 end
 
-better_comment.Setup()
+todo_comments.setup()

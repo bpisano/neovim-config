@@ -46,7 +46,7 @@ return packer.startup(function(use)
 	-- Editing
 	use("tpope/vim-surround") -- surround text objects
 	use("terrortylor/nvim-comment") -- comment text objects
-	use("Djancyp/better-comments.nvim") -- better comments
+	use("folke/todo-comments.nvim") -- better comments
 
 	-- File explorer
 	use("nvim-tree/nvim-tree.lua")
@@ -87,9 +87,10 @@ return packer.startup(function(use)
 	-- Configuring lsp servers
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- fast completion UI
+	use("onsails/lspkind-nvim") -- beautiful autocompletion icons
 	use("jose-elias-alvarez/typescript.nvim")
-	use("onsails/lspkind-nvim") -- beautiful autocompletion
+	use("MunifTanjim/eslint.nvim")
 
 	-- Omnisharp
 	use("OmniSharp/omnisharp-vim")
