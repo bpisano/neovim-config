@@ -90,7 +90,6 @@ return packer.startup(function(use)
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- fast completion UI
 	use("onsails/lspkind-nvim") -- beautiful autocompletion icons
 	use("jose-elias-alvarez/typescript.nvim")
-	use("MunifTanjim/eslint.nvim")
 
 	-- Omnisharp
 	use("OmniSharp/omnisharp-vim")
