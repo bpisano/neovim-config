@@ -20,6 +20,7 @@ local servers = {
 	"tailwindcss",
 	"lua_ls",
 	"omnisharp",
+	"clangd",
 }
 
 local settings = {

@@ -54,6 +54,14 @@ return packer.startup(function(use)
 
 	-- Status line
 	use("nvim-lualine/lualine.nvim")
+	use({
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons",
+		},
+	})
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -90,9 +98,7 @@ return packer.startup(function(use)
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- fast completion UI
 	use("onsails/lspkind-nvim") -- beautiful autocompletion icons
 	use("jose-elias-alvarez/typescript.nvim")
-
-	-- Omnisharp
-	use("OmniSharp/omnisharp-vim")
+	use("OmniSharp/omnisharp-vim") -- Omnisharp
 
 	-- Formatting and linting
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -106,6 +112,15 @@ return packer.startup(function(use)
 			ts_update()
 		end,
 	})
+
+	-- Trouble
+	use({
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
+
+	-- Illuminate
+	use("RRethy/vim-illuminate")
 
 	-- Auto closing
 	use("windwp/nvim-autopairs")
